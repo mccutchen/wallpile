@@ -11,9 +11,9 @@ Color.prototype.rgba = function() {
 }
 Color.prototype.fudge = function() {
     return new Color(
-        Utils.wrap(Utils.fudge(this.r, 5), 255),
-        Utils.wrap(Utils.fudge(this.g, 5), 255),
-        Utils.wrap(Utils.fudge(this.b, 5), 255),
+        Utils.bounce(Utils.fudge(this.r, 5), 255),
+        Utils.bounce(Utils.fudge(this.g, 5), 255),
+        Utils.bounce(Utils.fudge(this.b, 5), 255),
         this.a);
 }
 Color.prototype.toString = function() {
